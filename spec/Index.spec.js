@@ -2,6 +2,7 @@ var path = require('path');
 
 describe('Contacts', function() {
 	browser.get('http://localhost:8080');
+
 	it('should add a contact', function() {
 		element(by.model('vm.name')).sendKeys('Gary');
 		element(by.model('vm.phoneNumber')).sendKeys('0782837819');
@@ -19,5 +20,4 @@ describe('Contacts', function() {
 		contactList.get(1).element(by.css('a')).click();
 		expect(contactList.count()).toEqual(3);
 	});
-
 });
