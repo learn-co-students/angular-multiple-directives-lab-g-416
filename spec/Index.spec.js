@@ -4,7 +4,7 @@ describe('Contacts', function() {
 	browser.get('http://localhost:8080');
 	it('should add a contact', function() {
 		element(by.model('vm.name')).sendKeys('Gary');
-		element(by.model('vm.phoneNumber')).sendKeys('0782837819');
+		element(by.model('vm.phone')).sendKeys('0782837819');
 		element(by.css('button')).click();
 
 		var contactList = element.all(by.repeater('contact in vm.contacts'));
